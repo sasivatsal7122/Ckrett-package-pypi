@@ -12,16 +12,16 @@ Available operations in ckret library:
 ---------------------------------------------------------------------------------------------
 
 usecase example:
-
+```python
 import ckret
 x=input()
 msg=ckret.syph(x)
 print(msg)
-
+```
 u can change syph(),dsyph(),ksyph(),kdsyph() respectively depeding on your operation
 
-note:
-text ciphered using syph() can only be deciphered strictly by dsyph()
+note:\
+text ciphered using syph() can only be deciphered strictly by dsyph()\
 text ciphered using ksyph() can only be deciphered strictly by kdsyph()
 
 happy ciphering, peace.
