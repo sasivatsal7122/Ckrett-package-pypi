@@ -24,5 +24,9 @@ note:\
 text ciphered using syph() can only be deciphered strictly by dsyph()\
 text ciphered using ksyph() can only be deciphered strictly by kdsyph()
 
+note-2:\
+in version 1.0.0 there is no support for characters --> @,#,$,%,^,&,*,(,),! , kindly avoid using them in your sentence.\
+support for these charcaters will be added in next version (1.5.0)
+
 happy ciphering, peace✌.
 
