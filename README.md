@@ -1,4 +1,4 @@
-# ckret-python-library
+<h1 align="center">ckret-python-library</h1>
 This is an useful python library for people who care about privacy, this library is useful to cipher and decipher text using 4 simple functions.
 
 ---------------------------------------------------------------------------------------------
