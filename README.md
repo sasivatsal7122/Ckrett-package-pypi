@@ -4,10 +4,10 @@ This is an useful python library for people who care about privacy, this library
 ---------------------------------------------------------------------------------------------
 Available operations in ckret library:
 
-1.syph() -----> cypherises the user input text
-2.dsyph() -----> decypherises the user input text to plain text
-3.ksyph() ------> cypherises the user input text with unique 6 digit security key
-4.kdysph() -------> decypherises the text only when 6 digit security key is provided correctly
+1.syph() -----> cypherises the user input text\
+2.dsyph() -----> decypherises the user input text to plain text\
+3.ksyph() ------> cypherises the user input text with unique 6 digit security key\
+4.kdysph() -------> decypherises the text only when 6 digit security key is provided correctly\
 
 ---------------------------------------------------------------------------------------------
 
