@@ -24,5 +24,5 @@ note:\
 text ciphered using syph() can only be deciphered strictly by dsyph()\
 text ciphered using ksyph() can only be deciphered strictly by kdsyph()
 
-happy ciphering, peace.
+happy ciphering, peace✌️.
 
