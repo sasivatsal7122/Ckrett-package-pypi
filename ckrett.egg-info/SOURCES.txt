@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+ckrett/__init__.py
+ckrett.egg-info/PKG-INFO
+ckrett.egg-info/SOURCES.txt
+ckrett.egg-info/dependency_links.txt
+ckrett.egg-info/top_level.txt
