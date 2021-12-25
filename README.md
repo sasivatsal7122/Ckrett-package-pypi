@@ -1,4 +1,4 @@
-<h1 align="center">ckret-python-library</h1>
+<h1 align="center">ckrett-python-library</h1>
 This is an useful python library for people who care about privacy, this library is useful to cipher and decipher text using 4 simple functions.
 
 ---------------------------------------------------------------------------------------------
@@ -13,9 +13,9 @@ Available operations in ckret library:
 
 usecase example:
 ```python
-import ckret
+import ckrett
 x=input()
-msg=ckret.syph(x)
+msg=ckrett.syph(x)
 print(msg)
 ```
 u can change syph(),dsyph(),ksyph(),kdsyph() respectively depeding on your operation
