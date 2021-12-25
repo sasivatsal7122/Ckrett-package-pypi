@@ -11,6 +11,13 @@ Available operations in ckret library:
 
 ---------------------------------------------------------------------------------------------
 
+Install from official pypi repo --> https://pypi.org/project/ckrett/ 
+
+or
+```
+$ pip install ckrett
+```
+
 usecase example:
 ```python
 import ckrett
