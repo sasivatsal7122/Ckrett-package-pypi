@@ -8,7 +8,7 @@ Available operations in ckret library:
 2.dsyph() -----> decypherises the user input text to plain text\
 3.ksyph() ------> cypherises the user input text with unique 6 digit security key\
 4.kdsyph() -------> decypherises the text only when 6 digit security key is provided correctly\
-5.morse() -----> converts plain english text into morese code\
+5.morse() -----> converts plain english text into morse code\
 6.dmorse() -----> converts morse code into plain english text
 
 ---------------------------------------------------------------------------------------------
