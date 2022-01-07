@@ -7,7 +7,9 @@ Available operations in ckret library:
 1.syph() -----> cypherises the user input text\
 2.dsyph() -----> decypherises the user input text to plain text\
 3.ksyph() ------> cypherises the user input text with unique 6 digit security key\
-4.kdsyph() -------> decypherises the text only when 6 digit security key is provided correctly
+4.kdsyph() -------> decypherises the text only when 6 digit security key is provided correctly\
+5.morse()-----> converts plain english text into morese code\
+6.dmorse()-=---> converts morse code into plain english text
 
 ---------------------------------------------------------------------------------------------
 
@@ -25,11 +27,12 @@ x=input()
 msg=ckrett.syph(x)
 print(msg)
 ```
-u can change syph(),dsyph(),ksyph(),kdsyph() respectively depeding on your operation
+u can change syph(),dsyph(),ksyph(),kdsyph(),morse(),dmorse() respectively depeding on your operation
 
 note:\
 text ciphered using syph() can only be deciphered strictly by dsyph()\
-text ciphered using ksyph() can only be deciphered strictly by kdsyph()
+text ciphered using ksyph() can only be deciphered strictly by kdsyph()\
+text ciphered using morse() can only be deciphered strictly by dmorse()
 
 note-2:\
 in version 1.0.0 there is no support for characters --> @,#,$,%,^,&,*,(,),! , kindly avoid using them in your sentence.\
