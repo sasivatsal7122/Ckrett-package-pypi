@@ -1,6 +1,6 @@
 <h1 align="center">ckrett-python-library</h1>
 <h2 align="center">version-1.5.0</h2>
-This is an useful python library for people who care about privacy, this library is useful to cipher and decipher text using 4 simple functions.
+This is an useful python library for people who care about privacy, this library is useful to cipher and decipher text using 6 simple functions.
 
 ---------------------------------------------------------------------------------------------
 Available operations in ckret library:
