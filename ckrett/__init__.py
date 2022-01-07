@@ -239,7 +239,7 @@ def dmorse(x):
 				morse_decipher+=list(morsedict.keys())[list(morsedict.values()).index(temp_var)]
 				temp_var=''
 	return morse_decipher.lower() #returing plain text as lower literals
-def st():
+def stot():
     	# Initializing the recognizer
 	r = sr.Recognizer()
 	# driver Function to convert text to speech using pyttxs3 package functions
