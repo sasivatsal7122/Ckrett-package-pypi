@@ -6,8 +6,8 @@ Available operations:
 2.dsyph() -----> decypherises the user input text to plain text
 3.ksyph() ------> cypherises the user input text with unique 6 digit security key which can be used to decrypt
 4.kdysph() -------> decypherises the 6 digit encrypted user input text to plain text
-5.morse() -----> converts plain english text into morese code
-6.dmorse() ----> converts morse code into plain english text
+5.morse()-----> converts plain english text into morese code
+6.dmorse()-=---> converts morse code into plain english text
 ---------------------------------------------------------------------------------------------------------------
 """
 """
@@ -24,6 +24,9 @@ morsedict={ 'A':'.-', 'B':'-...','C':'-.-.', 'D':'-..', 'E':'.','F':'..-.', 'G':
 #kdcyphkey={'ή':'1','ß':'2','Ô':'3','↓':'4','⸘':'5','∂':'6','⅋':'7','ę':'8','ᶂ':'9','ì':'0'}
 spclc=['?','.',',','φ','ζ']
 import random
+import speech_recognition as sr
+import pyttsx3
+from time import sleep
 """
 driver function for phase-2 decrypting 
 takes input as plain text with jumbled words with their respective word positions
@@ -236,3 +239,39 @@ def dmorse(x):
 				morse_decipher+=list(morsedict.keys())[list(morsedict.values()).index(temp_var)]
 				temp_var=''
 	return morse_decipher.lower() #returing plain text as lower literals
+def st():
+    	# Initializing the recognizer
+	r = sr.Recognizer()
+	# driver Function to convert text to speech using pyttxs3 package functions
+	def SpeakText(command):
+		engine = pyttsx3.init()
+		engine.say(command)
+		engine.runAndWait()
+	while(1):	
+		try:
+			# using system microphone as source for input, microphone instance is subclass of audiosource
+			with sr.Microphone() as source2:
+				# adjusting the energy threshold dynamically by analysing the surrounding ambient noise from microphone
+				# process takes about 0.5sec
+				r.adjust_for_ambient_noise(source2, duration=0.5)
+				print("Intialzing speech recognition engine...")
+				#listens for the user's input
+				sleep(0.5)
+				print("Listening.....")
+				audio2 = r.listen(source2)
+				print("Recognizing......")
+				# Using google to recognize audio
+				user_input = r.recognize_google(audio2)
+				user_input = user_input.lower() # formatting user input
+				SpeakText(user_input) #passing user input
+				check=input(f"Did you say {user_input} y or n: ")
+				# if requirement satisfied loop terminates else continues
+				if check=='y':
+					return user_input
+				else:
+					print("i'm sorry couldn't recognize try again....")
+					continue
+		except sr.RequestError as e:
+			print("Could not request results; {0}".format(e))
+		except sr.UnknownValueError:
+			print("unknown error occured")
