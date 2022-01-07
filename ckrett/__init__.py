@@ -6,6 +6,8 @@ Available operations:
 2.dsyph() -----> decypherises the user input text to plain text
 3.ksyph() ------> cypherises the user input text with unique 6 digit security key which can be used to decrypt
 4.kdysph() -------> decypherises the 6 digit encrypted user input text to plain text
+5.morse()-----> converts plain english text into morese code
+6.dmorse()-=---> converts morse code into plain english text
 ---------------------------------------------------------------------------------------------------------------
 """
 """
@@ -17,6 +19,7 @@ cyphdict={'e': 'C', 'd': 'N', 'c': 'E', 'a': 'L', 'i': 'P', 'j': 'K', 'x': 'X', 
 decyphdict={'C': 'e', 'N': 'd', 'E': 'c', 'L': 'a', 'P': 'i', 'K': 'j', 'X': 'x', 'M': 's', 'D': 'r', 'H': 'h', 'V': 'k', 'W': 'm', 'U': 'n', 'S': 'u', 'R': 'p', 'I': 'f', 'T': 'g', 'J': 'y', 'O': 'q', 'A': 'z', 'Q': 'l', 'G': 'b', 'Z': 'w', 'Y': 'v', 'B': 'o', 'F': 't','?': ' ','φ':'.','ζ':','}
 kcyphkey={'1':'‽','2':'⸮','3':'₤','4':'↓','5':'⸘','6':'↑','7':'⅋','8':'‰','9':'⁋','0':'¶'}
 kdcyphkey={'‽': '1', '⸮': '2', '₤': '3', '↓': '4', '⸘': '5', '↑': '6', '⅋': '7', '‰': '8', '⁋': '9', '¶': '0'}
+morsedict={ 'A':'.-', 'B':'-...','C':'-.-.', 'D':'-..', 'E':'.','F':'..-.', 'G':'--.', 'H':'....','I':'..', 'J':'.---', 'K':'-.-','L':'.-..', 'M':'--', 'N':'-.','O':'---', 'P':'.--.', 'Q':'--.-','R':'.-.', 'S':'...', 'T':'-','U':'..-', 'V':'...-', 'W':'.--','X':'-..-', 'Y':'-.--', 'Z':'--..','1':'.----', '2':'..---', '3':'...--','4':'....-', '5':'.....', '6':'-....','7':'--...', '8':'---..', '9':'----.','0':'-----', ',':'--..--', '.':'.-.-.-','?':'..--..', '/':'-..-.', '-':'-....-','(':'-.--.', ')':'-.--.-'}
 #kcyphkey={'1':'ή','2':'ß','3':'Ô','4':'↓','5':'⸘','6':'∂','7':'⅋','8':'ę','9':'ᶂ','0':'ì'}
 #kdcyphkey={'ή':'1','ß':'2','Ô':'3','↓':'4','⸘':'5','∂':'6','⅋':'7','ę':'8','ᶂ':'9','ì':'0'}
 spclc=['?','.',',','φ','ζ']
@@ -115,7 +118,7 @@ driver code for functions in ckret module
 """
 
 """
-driver code for cypherring and decyphering without key
+driver code for cyphering and decyphering without key
 """
 """
 support for numbers in user given sentence
@@ -199,3 +202,37 @@ def kdsyph(x):
         else:
             return ("you entered wrong key cannot decrypt...teriminating.......") #returning false if key is not authentic
 
+"""
+driver code for converting into morse code and vice versa
+"""
+'''
+morse() takes input as plain egnlish text and converts into morse code
+'''
+def morse(x):
+    morse_cipher=''
+    y=x.upper()
+    for i in y:
+        if i != ' ':
+            morse_cipher+=morsedict[i]+' '
+        else:
+            morse_cipher += ' '
+    return morse_cipher #returning morse code
+'''
+dmorse() takes input as morse code and converts into plain english text
+'''
+def dmorse(x):
+	x+=' '
+	morse_decipher=''
+	temp_var=''
+	for i in x:
+		if (i!=' '):
+			c = 0
+			temp_var+=i
+		else:
+			c+=1
+			if c == 2 :
+				morse_decipher+=' '
+			else:
+				morse_decipher+=list(morsedict.keys())[list(morsedict.values()).index(temp_var)]
+				temp_var=''
+	return morse_decipher.lower() #returing plain text as lower literals
