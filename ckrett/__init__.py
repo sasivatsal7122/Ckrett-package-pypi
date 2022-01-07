@@ -6,8 +6,8 @@ Available operations:
 2.dsyph() -----> decypherises the user input text to plain text
 3.ksyph() ------> cypherises the user input text with unique 6 digit security key which can be used to decrypt
 4.kdysph() -------> decypherises the 6 digit encrypted user input text to plain text
-5.morse()-----> converts plain english text into morese code
-6.dmorse()-=---> converts morse code into plain english text
+5.morse() -----> converts plain english text into morese code
+6.dmorse() ----> converts morse code into plain english text
 ---------------------------------------------------------------------------------------------------------------
 """
 """
