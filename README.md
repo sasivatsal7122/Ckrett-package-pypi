@@ -15,6 +15,25 @@ Available operations in ckret library:
 
 ---------------------------------------------------------------------------------------------
 
+# Prerequisites: 
+==> for speech recognition to work that is stot(), <b>pyaudio, speechrecognition must be strictly pre-installed</b>, otherwise you'll get an error.\
+==> if pyaudio,  speechrecognition is already installed you can skip this step and proceed for installation
+
+or
+
+install pyaudio by executing the following commands in cmd before or after installing ckrett:
+```
+step-1 : $ pip install pipwin
+step-2 : $ pipwin install pyaudio
+```
+pipwin is like pip, but it installs precompiled Windows binaries and depencies that are required for building and compiling pyaudio setup files
+
+next install speechrecognition by executing the following commands in cmd 
+```
+$ pip install speechrecognition
+```
+
+# Installation:
 Install from official pypi repo --> https://pypi.org/project/ckrett/ 
 
 or
@@ -36,7 +55,7 @@ print(msg)
 
 ```python
 import ckrett
-x=stot()
+x=ckrett.stot()
 msg=ckrett.syph(x)
 print(msg)
 ```
@@ -64,4 +83,3 @@ $ using stot() user can dicate a sentence which is recognized using dependecies-
 ->support for these charcaters will be added in next version (2.0.0)
 
 happy ciphering, peace✌.
-

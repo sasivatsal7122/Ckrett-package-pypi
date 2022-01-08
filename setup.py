@@ -14,7 +14,7 @@ classifiers = [
  
 setup(
   name='ckrett',
-  version='1.0.0',
+  version='1.5.0',
   description='a basic ciphering/deciphering tool',
   long_description=long_description,
   long_description_content_type="text/markdown",
@@ -25,5 +25,5 @@ setup(
   classifiers=classifiers,
   keywords='ckrett',
   packages=['ckrett'],
-  install_requires=[''],
+  install_requires=['pyttsx3','pipwin'],
 )
