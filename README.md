@@ -83,4 +83,3 @@ $ using stot() user can dicate a sentence which is recognized using dependecies-
 ->support for these charcaters will be added in next version (2.0.0)
 
 happy ciphering, peace✌.
-

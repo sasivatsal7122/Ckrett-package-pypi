@@ -1,44 +1,11 @@
 Metadata-Version: 2.1
 Name: ckrett
-Version: 1.0.0
+Version: 1.5.0
 Summary: a basic ciphering/deciphering tool
 Home-page: https://github.com/sasivatsal7122/ckret-library-pypi
 Author: Sasi Vatsal
 Author-email: sasivatsal7122@gmail.com
 License: MIT
-Description: <h1 align="center">ckret-python-library</h1>
-        This is an useful python library for people who care about privacy, this library is useful to cipher and decipher text using 4 simple functions.
-        
-        ---------------------------------------------------------------------------------------------
-        Available operations in ckret library:
-        
-        1.syph() -----> cypherises the user input text\
-        2.dsyph() -----> decypherises the user input text to plain text\
-        3.ksyph() ------> cypherises the user input text with unique 6 digit security key\
-        4.kdysph() -------> decypherises the text only when 6 digit security key is provided correctly\
-        
-        ---------------------------------------------------------------------------------------------
-        
-        usecase example:
-        ```python
-        import ckret
-        x=input()
-        msg=ckret.syph(x)
-        print(msg)
-        ```
-        u can change syph(),dsyph(),ksyph(),kdsyph() respectively depeding on your operation
-        
-        note:\
-        text ciphered using syph() can only be deciphered strictly by dsyph()\
-        text ciphered using ksyph() can only be deciphered strictly by kdsyph()
-        
-        note-2:\
-        in version 1.0.0 there is no support for characters --> @,#,$,%,^,&,*,(,),! , kindly avoid using them in your sentence.\
-        support for these charcaters will be added in next version (1.5.0)
-        
-        happy ciphering, peace✌.
-        
-        
 Keywords: ckrett
 Platform: UNKNOWN
 Classifier: Development Status :: 5 - Production/Stable
@@ -47,3 +14,82 @@ Classifier: Operating System :: Microsoft :: Windows :: Windows 10
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3
 Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<h1 align="center">ckrett-python-library</h1>
+<h2 align="center">version-1.5.0</h2>
+This is an useful python library for people who care about privacy, this library is useful to cipher and decipher text using 6 simple functions.
+
+---------------------------------------------------------------------------------------------
+Available operations in ckret library:
+
+1.syph() -----> cypherises the user input text\
+2.dsyph() -----> decypherises the user input text to plain text\
+3.ksyph() ------> cypherises the user input text with unique 6 digit security key\
+4.kdsyph() -------> decypherises the text only when 6 digit security key is provided correctly\
+5.morse() -----> converts plain english text into morse code\
+6.dmorse() -----> converts morse code into plain english text\
+7.stot() -------> converts speech to text, can be used in place of input()
+
+---------------------------------------------------------------------------------------------
+
+# Prerequisites: 
+==> for speech recognition to work that is stot(), <b>pyaudio, speechrecognition must be strictly pre-installed</b>, otherwise you'll get an error.\
+==> if pyaudio,  speechrecognition is already installed you can skip this step and proceed for installation
+
+or
+
+install pyaudio by executing the following commands in cmd before or after installing ckrett:
+```
+step-1 : $ pip install pipwin
+step-2 : $ pipwin install pyaudio
+```
+### pipwin is like pip, but it installs precompiled Windows binaries and depencies that are required for building and compiling pyaudio setup files
+
+next install speechrecognition by executing the following commands in cmd 
+```
+$ pip install speechrecognition
+```
+
+### usecase example:
+
+#### you can either use traditional input() 
+
+```python
+import ckrett
+x=input()
+msg=ckrett.syph(x)
+print(msg)
+```
+### or: 
+
+```python
+import ckrett
+x=ckrett.stot()
+msg=ckrett.syph(x)
+print(msg)
+```
+### u can change syph(),dsyph(),ksyph(),kdsyph(),morse(),dmorse() respectively depeding on your choice of ciphering
+
+==>changes in 1.5.0:\
+$ added morse(),dmorse(),stot()\
+$ user can now convert plain english text into morse code and vice versa\
+$ using stot() user can dicate a sentence which is recognized using dependecies-pyaudio,pyttxs3,speech_recognition engine that can be stored in var x which can be used for         ciphering directly from speech, instead of typing out the entire sentence using input().
+
+### note-1:
+->stot() can only be used to give input in plain english, as special character or encrypted msg's arent recognized accurately\
+->use stot() for syph(),ksyph(),morse()
+
+### note-2:
+->text ciphered using syph() can only be deciphered strictly by dsyph()\
+->text ciphered using ksyph() can only be deciphered strictly by kdsyph()\
+->text ciphered using morse() can only be deciphered strictly by dmorse()
+
+### note-3:
+->in version 1.0.0,1.5.0 there is no support for characters --> @,#,$,%,^,&,*,(,),! , kindly avoid using them in your sentence.\
+->support for these charcaters will be added in next version (2.0.0)
+
+for bug reports/issues ---> https://github.com/sasivatsal7122/ckret-library-pypi
+
+happy ciphering, peace✌.
+
