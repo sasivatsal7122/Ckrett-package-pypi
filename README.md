@@ -55,7 +55,7 @@ print(msg)
 
 ```python
 import ckrett
-x=stot()
+x=ckrett.stot()
 msg=ckrett.syph(x)
 print(msg)
 ```
