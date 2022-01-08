@@ -15,16 +15,24 @@ Available operations in ckret library:
 
 ---------------------------------------------------------------------------------------------
 
-# Note: 
-==> for speech recognition to work that is stot(), <b>pyaudio must be strictly pre-installed</b>, otherwise you'll get an error.\
-if pyaudio is already installed you can skip this step and proceed for installation\
-or\
+# Prerequisites: 
+==> for speech recognition to work that is stot(), <b>pyaudio, speechrecognition must be strictly pre-installed</b>, otherwise you'll get an error.\
+==> if pyaudio,  speechrecognition is already installed you can skip this step and proceed for installation
+
+or
+
 install pyaudio by executing the following commands in cmd before or after installing ckrett:
 ```
 step-1 : $ pip install pipwin
 step-2 : $ pipwin install pyaudio
 ```
-pipwin is used to install windows binaries and depencies that are required for building and compiling pyaudio setup files
+pipwin is like pip, but it installs precompiled Windows binaries and depencies that are required for building and compiling pyaudio setup files
+
+next install speechrecognition by executing the following commands in cmd 
+```
+$ pip install speechrecognition
+```
+
 # Installation:
 Install from official pypi repo --> https://pypi.org/project/ckrett/ 
 
