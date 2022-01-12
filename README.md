@@ -82,4 +82,6 @@ $ using stot() user can dicate a sentence which is recognized using dependecies-
 ->in version 1.0.0,1.5.0 there is no support for characters --> @,#,$,%,^,&,*,(,),! , kindly avoid using them in your sentence.\
 ->support for these charcaters will be added in next version (2.0.0)
 
+I will also soon be publishing it on <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a>
+
 happy ciphering, peace✌.
