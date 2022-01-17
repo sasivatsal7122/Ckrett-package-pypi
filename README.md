@@ -64,23 +64,23 @@ print(msg)
 
 ### u can change syph(),dsyph(),ksyph(),kdsyph(),morse(),dmorse() respectively depeding on your choice of ciphering
 
-==>changes in 1.5.0:\
+==> Changes in 1.5.0:\
 $ added morse(),dmorse(),stot()\
 $ user can now convert plain english text into morse code and vice versa\
 $ using stot() user can dicate a sentence which is recognized using dependecies-pyaudio,pyttxs3,speech_recognition engine that can be stored in var x which can be used for         ciphering directly from speech, instead of typing out the entire sentence using input().
 
 ### note-1:
-->stot() can only be used to give input in plain english, as special character or encrypted msg's arent recognized accurately\
-->use stot() for syph(),ksyph(),morse()
+- stot() can only be used to give input in plain english, as special character or encrypted msg's arent recognized accurately
+- use stot() for syph(),ksyph(),morse()
 
 ### note-2:
-->text ciphered using syph() can only be deciphered strictly by dsyph()\
-->text ciphered using ksyph() can only be deciphered strictly by kdsyph()\
-->text ciphered using morse() can only be deciphered strictly by dmorse()
+- text ciphered using syph() can only be deciphered strictly by dsyph()
+- text ciphered using ksyph() can only be deciphered strictly by kdsyph()
+- text ciphered using morse() can only be deciphered strictly by dmorse()
 
 ### note-3:
-->in version 1.0.0,1.5.0 there is no support for characters --> @,#,$,%,^,&,*,(,),! , kindly avoid using them in your sentence.\
-->support for these charcaters will be added in next version (2.0.0)
+- in version 1.0.0,1.5.0 there is no support for characters --> @,#,$,%,^,&,*,(,),! , kindly avoid using them in your sentence.
+- support for these charcaters will be added in next version (2.0.0)
 
 I will also soon be publishing it on <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a>
 
